@@ -23,37 +23,9 @@
 <body>
     <!--Container-->
     <div class="container-fluid">
-      <!--Row-->
-      <div class="row justify-content-center">
-        
-        <!--left column-->
-        <div class="col-lg-5">
-          <p class="display-4">Random Design Quotes</p>
-          
-          <!-- Buttons -->
-          <div id="quote-button-p">
-            <!--Generate Quote Button-->
-            <button type="button" id="generate" class="btn btn-block quote-button" >
-              Generate a new quote... 
-            </button>
-            
-            <!--Twitter Button (link is dynamically set by JS) -->
-            <a href="#" id="tweet" class="btn btn-block quote-button">
-                <i class="fab fa-twitter fa-flip-horizontal"></i> Tweet the quote <i class="fab fa-twitter"></i>
-            </a>
-          </div>
-          
-        </div>
-        
-        <!--Right column-->
-        <div class="col-lg-7 quote" href="#">
-        
-          <!-- The quote is displayed here-->
-          <div id='quote'></div>
-        
-        </div>
-        
-      </div><!--End Row-->
+        <h1 class="display-1">Local Weather</h1>
+        <button id="units-button" class="btn" type="button">Change the scale (Celsius or Farenheit)</button>
+        <p id="temp-display" class="display-3">_._°</p>
     </div> <!--End Container-->
     
     <!-- jQuery -->
@@ -64,3 +36,4 @@
     <script src="index.js"></script>
 </body>
 </html>
+
