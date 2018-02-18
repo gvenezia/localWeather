@@ -17,7 +17,6 @@
           weatherDescription= document.getElementById('weather-description')
         
   // =============== Page Load ================
-  // 
   document.addEventListener("DOMContentLoaded", function getLocationAndWeatherInformation(){
     // Get location 
     navigator.geolocation.getCurrentPosition(function assignCurrentPosition(position){
@@ -25,8 +24,6 @@
         userLongitude = position.coords.longitude;
         
         getWeatherInfoFromApiAndSetHtml();
-        
-    
       });
   });
     
@@ -69,26 +66,24 @@
   };
   
   function setHtmlDisplayWithWeatherInfo() {
-    //   Assign the celsius temp rounded to the tens place
+      // Assign the celsius temp rounded to the tens place
       degreesC = Math.round(10 * apiResponse.main.temp)/10;
       
-    //   create the degreesF with makeDegreesFfromC
-      makeDegreesFfromC();
+      // Set the degreesF with makeDegreesFfromC
+      setDegreesFfromC();
       
-    //   Set the display elements
+      // Set the display elements
       tempDisplay.innerHTML = `${degreesF}° F`;
       weatherIcon.innerHTML = `<img id="weather-icon" src="${apiResponse.weather[0].icon}">`;
       weatherDescription.innerHTML = apiResponse.weather[0].description.toLowerCase();
       cityName.innerHTML = apiResponse.name;
       
-      setTempDisplayColor()
-  }
+      setTempDisplayColor();
+  };
   
-  //   Convert from degrees Celsius to degrees Farenheit
-  function makeDegreesFfromC(){
-    // temperature in Celsius times 9/5, plus 32.
-    degreesF = Math.round( (degreesC * (9/5)) + 32 );
-    
+  // Convert from degrees Celsius to degrees Farenheit
+  function setDegreesFfromC(){
+      degreesF = Math.round( (degreesC * (9/5)) + 32 );
   };
   
   // Uses degreesF to dynamically change the display color, bluer is colder, redder is warmer

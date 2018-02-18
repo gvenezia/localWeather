@@ -23,17 +23,25 @@
 <body>
     <!--Container-->
     <div class="container-fluid">
-        
-        <h1 class="display-1">Local Weather</h1>
-        <h1 class="display-4">It is currently
-            <span id="temp-display"><img class="loading-gif" src="Radio-1s-200px.gif"></span> 
-            with <span id="weather-icon"><img class="loading-gif" src="Radio-1s-200px.gif"></span>
+        <!--Display Text-->
+        <h1 class="display-4">
+            It is currently
+            <span id="temp-display">
+                <!-- Loading image from Loading.io https://loading.io/spinner/custom/115881/ -->
+                <div class="loading-css-div1 lds-css ng-scope"><div class="loading-css-div2 lds-radio"><div></div><div></div><div></div></div></div>
+            </span> 
+            with <span id="weather-icon">
+                <div class="loading-css-div1 lds-css ng-scope"><div class="loading-css-div2 lds-radio"><div></div><div></div><div></div></div></div>
+            </span>
             <span id="weather-description"></span>
-            in <span id="city-name"><img class="loading-gif" src="Radio-1s-200px.gif"></span>
+            in <span id="city-name">
+                <div class="loading-css-div1 lds-css ng-scope"><div class="loading-css-div2 lds-radio"><div></div><div></div><div></div></div></div>
+            </span>
         </h1>
-        <button id="units-button" class="btn btn-light btn-lg" type="button">Change the scale (Celsius or Farenheit)</button>
-        <div>
-        </div>
+        
+        <!--Scale Button-->
+        <button id="units-button" class="btn btn-light btn-lg" type="button">Change the scale (Celsius/Farenheit)</button>
+        
     </div> <!--End Container-->
     
     <!-- jQuery -->
