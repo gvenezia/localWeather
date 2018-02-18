@@ -6,6 +6,16 @@ html {
 
 body {
   font-family: Kavivanar;
+  text-shadow: 2px -2px white;
 }
 
+span {
+  font-size: 1.5em;
+}
 
+/* classes */
+
+/* ready-made bootstrap-btn classes made by https://bootstrapbay.com/blog/bootstrap-button-styles/ */
+.loading-gif {
+  width: 80px;
+}

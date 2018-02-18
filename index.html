@@ -23,10 +23,17 @@
 <body>
     <!--Container-->
     <div class="container-fluid">
+        
         <h1 class="display-1">Local Weather</h1>
-        <h1 class="display-3">in <span id="city-name"></span></h1>
-        <button id="units-button" class="btn" type="button">Change the scale (Celsius or Farenheit)</button>
-        <p id="temp-display" class="display-3">_._°</p>
+        <h1 class="display-4">It is currently
+            <span id="temp-display"><img class="loading-gif" src="Radio-1s-200px.gif"></span> 
+            with <span id="weather-icon"><img class="loading-gif" src="Radio-1s-200px.gif"></span>
+            <span id="weather-description"></span>
+            in <span id="city-name"><img class="loading-gif" src="Radio-1s-200px.gif"></span>
+        </h1>
+        <button id="units-button" class="btn btn-light btn-lg" type="button">Change the scale (Celsius or Farenheit)</button>
+        <div>
+        </div>
     </div> <!--End Container-->
     
     <!-- jQuery -->
