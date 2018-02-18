@@ -9,13 +9,14 @@
         degreesF      = 0;
         
     const unitsButton = document.getElementById('units-button'),
-          tempDisplay = document.getElementById('temp-display');
+          tempDisplay = document.getElementById('temp-display'),
+          cityName    = document.getElementById('city-name');
         
   // =============== Page Load ================
   // 
   $(document).ready(function getLocationAndWeatherInformation(){
     // Get location 
-    navigator.geolocation.getCurrentPosition(function assignCurrentPosition(){
+    navigator.geolocation.getCurrentPosition(function assignCurrentPosition(position){
         userLatitude  = position.coords.latitude;
         userLongitude = position.coords.longitude;
         
@@ -28,7 +29,7 @@
   // ============= Click Events ==============
     unitsButton.addEventListener('click', function addChangeUnitsListener(){
         // change the display
-        tempDisplay.innerHTML = "100°";
+        tempDisplay.innerHTML = `${degreesF}° F`;
     });
   
   // ============== Functions ================
@@ -38,13 +39,17 @@
       
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState == 4 && xhttp.status == 200) {
-              // convert the response to JSON
-              var response = JSON.parse(this);
+              let apiResponse = JSON.parse(this.responseText);
               
-              console.log(response);
+              console.log(apiResponse);
+            //   console.log(response);
               
-              degreesC = response.main.temp;
-              degreesF = cToF();
+              degreesC = apiResponse.main.temp;
+              cToF();
+              
+              tempDisplay.innerHTML = `${degreesC}° C`;
+              
+              cityName.innerHTML = apiResponse.name;
             }
         };
       
@@ -56,7 +61,8 @@
   //   Convert from degrees Celsius to degrees Farenheit
   function cToF(){
     // temperature in Celsius times 9/5, plus 32.
-    degreesF = (degreesC * (9/5)) + 32;
+    degreesF = Math.round( (degreesC * (9/5)) + 32 );
+    
   };
   
 })();
