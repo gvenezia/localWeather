@@ -16,7 +16,7 @@ With permission, the user's location is used to display the current temperature 
 ___
 *Created for Free Code Camp*
 ___
-Here's the loading screen
+### Here's the loading screen
 ![screenshot of the local weather web app](https://github.com/gvenezia/myWebsite/blob/master/images/localWeatherLoad.png)
-Here's the loaded page
+### Here's the loaded page
 ![screenshot of the loaded page](https://github.com/gvenezia/myWebsite/blob/master/images/localWeather.png)
