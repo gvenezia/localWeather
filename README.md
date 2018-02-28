@@ -3,7 +3,7 @@
 Try it out on [Codepen](https://codepen.io/gvenezia/full/vddOXK/)
 
 ## What does it do?
-With permission, the user's location is used to display the current temperature (F or C) and weather conditions (misty, sunny, etc.) in their area.
+With permission, the user's location is used to display the current temperature (F or C) and weather conditions (misty, sunny, etc.) in their area. Depending on the temperature, the color of the temperature readout ranges from bright red (hottest) to purple (warm/cool) to dark blue (coldest). The weather conditions are displayed with a descriptive icon provided by the API.
 
 ## What was it built with?
 * [Free Code Camp's weather API](https://fcc-weather-api.glitch.me/)
